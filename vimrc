@@ -1,24 +1,28 @@
 set nu
 set relativenumber
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible				" be iMproved
+filetype off						" required!
 syntax on
-set autoindent		" auto indentation
-set incsearch		" incremental search
-set nobackup		" no *~ backup files
-set copyindent		" copy the previous indentation on autoindenting
-set backspace=2	"在 insert 也可用 backspace
+set autoindent					" auto indentation
+set incsearch						" incremental search
+set nobackup						" no *~ backup files
+set copyindent					" copy the previous indentation on autoindenting
+set backspace=2					"在 insert 也可用 backspace
 set ai
-set shiftwidth=2 " 設定縮排寬度 = 4 
-set tabstop=2    " tab 的字元數
+set shiftwidth=2				" 設定縮排寬度 
+set tabstop=2						" tab 的字元數
 set softtabstop=2
 set hlsearch
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set ruler
+set laststatus=2
+set showcmd
+set scrolloff=5
 
 nmap <tab> :tabn<CR>
 nmap <F5> :NERDTree<CR>
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
