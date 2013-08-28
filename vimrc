@@ -50,6 +50,8 @@ Bundle 'https://github.com/scrooloose/syntastic'
 Bundle 'taglist.vim'
 Bundle 'https://github.com/shen0816/cscope_maps.vim.git'
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'https://github.com/c9s/hypergit.vim'
+Bundle 'EasyGrep'
 
 
 filetype plugin indent on     " required!
