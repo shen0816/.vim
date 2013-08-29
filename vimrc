@@ -19,7 +19,7 @@ set showcmd
 set scrolloff=5
 
 nmap <tab> :tabn<CR>
-nmap <F5> :NERDTree<CR>
+nmap <F5> :NERDTreeFind<CR>
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
