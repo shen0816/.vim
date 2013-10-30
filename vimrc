@@ -18,6 +18,10 @@ set laststatus=2
 set showcmd
 set scrolloff=5
 
+if has("gui_running")
+	colorscheme vividchalk
+endif
+
 nmap <tab> :tabn<CR>
 nmap <F5> :NERDTreeFind<CR>
 
