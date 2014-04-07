@@ -56,6 +56,7 @@ Bundle 'https://github.com/shen0816/cscope_maps.vim.git'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'https://github.com/c9s/hypergit.vim'
 Bundle 'EasyGrep'
+Bundle 'tfnico/vim-gradle'
 
 
 filetype plugin indent on     " required!
