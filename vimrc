@@ -1,7 +1,7 @@
+set background=dark
 set nu
 set relativenumber
 set nocompatible				" be iMproved
-filetype off						" required!
 syntax on
 set autoindent					" auto indentation
 set incsearch						" incremental search
@@ -25,8 +25,10 @@ endif
 nmap <tab> :tabn<CR>
 nmap <F5> :NERDTreeFind<CR>
 
+filetype off						" required!
+
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
@@ -57,8 +59,9 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'https://github.com/c9s/hypergit.vim'
 Bundle 'EasyGrep'
 Bundle 'tfnico/vim-gradle'
+Bundle 'groovy.vim'
 
-
+call vundle#end()
 filetype plugin indent on     " required!
 
 " Brief help
