@@ -18,9 +18,27 @@ set laststatus=2
 set showcmd
 set scrolloff=5
 
+"開啟html自動補齊功能
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+let g:clang_library_path='/opt/local/libexec/llvm-3.7/lib'
+let g:clang_use_library=1
+
 if has("gui_running")
-	colorscheme vividchalk
+	" colorscheme vividchalk
+	colorscheme ir_black 
+	set guifont=Monaco:h16
 endif
+
+"高亮資訊列設定
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
 
 nmap <tab> :tabn<CR>
 nmap <F5> :NERDTreeFind<CR>
@@ -60,9 +78,52 @@ Bundle 'https://github.com/c9s/hypergit.vim'
 Bundle 'EasyGrep'
 Bundle 'tfnico/vim-gradle'
 Bundle 'groovy.vim'
+"高亮資訊列
+Bundle 'itchyny/lightline.vim'
+"Python mode plugin
+"Bundle 'klen/python-mode'
+"Bundle 'Pydiction'
+"let g:pydiction_location = '/Users/chuck/.vim/bundle/Pydiction/complete-dict'
+
+"自動補齊
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+
+"Html5
+Bundle 'othree/html5.vim'
+
+"Javascript mode plugin
+Plugin 'jelera/vim-javascript-syntax'
+au FileType javascript call JavaScriptFold()
+
+"CSS Syntax
+Plugin 'hail2u/vim-css3-syntax'
+augroup VimCSS3Syntax
+	autocmd!
+
+	autocmd FileType css setlocal iskeyword+=-
+augroup END
+
+"幫助你註解
+Plugin 'tomtom/tcomment_vim'
+
+"幫助執行html
+Plugin 'tell-k/vim-browsereload-mac'
+let g:returnAppFlag = 1
+let g:returnApp = "iTerm"
+
+" open browser 可以在vim直接開url
+Plugin 'tyru/open-browser.vim'
+
+"Bundle 'othree/javascript-libraries-syntax.vim'
+"Bundle 'SyntaxComplete'
+"Bundle 'MarcWeber/vim-addon-local-vimrc'
+
 
 call vundle#end()
 filetype plugin indent on     " required!
+
 
 " Brief help
 " :BundleList          - list configured bundles
